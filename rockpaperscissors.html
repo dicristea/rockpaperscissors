@@ -9,7 +9,6 @@
 <body>
     <script>
         // computerPlay function to randomly return "Rock" "Paper" or "Scissors"
-        
 
         function computerPlay() {
 
@@ -23,6 +22,7 @@
               return "Scissors"
             } else return "Falty";
         }
+
         // playerSelection takes user input case-insensitive
         // computerSelection is computerPlay
         // rock beats scissors
@@ -38,6 +38,7 @@
         function playRound(playerSelection, computerSelection) {
             if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
                 return "You tie!";
+                // .toLowerCase or .toUpperCase allows for consistent comparison
 
             } else if (playerSelection.toLowerCase() == "rock") {
                 if (computerSelection == "Paper") {
@@ -61,9 +62,13 @@
                 }
             } else return "falty";
         }
-        console.log(playRound(playerSelection, computerSelection));
 
-        
+
+        function game() {
+            for (let i = 0; i < 5; i++) {
+            console.log(playRound(playerSelection, computerSelection));
+            }
+        }
 
     </script>
 </body>
