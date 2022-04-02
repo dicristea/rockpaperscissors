@@ -8,7 +8,6 @@
 </head>
 <body>
     <script>
-        // computerPlay function to randomly return "Rock" "Paper" or "Scissors"
 
         function computerPlay() {
 
@@ -20,55 +19,96 @@
               return "Paper"
             } else if (computerNum == 2) {
               return "Scissors"
-            } else return "Falty";
+            } else {
+                return "Falty";
+            }
         }
 
         // playerSelection takes user input case-insensitive
-        // computerSelection is computerPlay
-        // rock beats scissors
-        // scissors beats paper
-        // paper beats rock
-
-        let playerSelection = "ROck";
-        console.log(playerSelection);
-
-        let computerSelection = computerPlay();
-        console.log(computerSelection);
         
         function playRound(playerSelection, computerSelection) {
-            if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
+            
+            let lowerPlayerSelection = playerSelection.toLowerCase()
+
+            if (lowerPlayerSelection == computerSelection.toLowerCase()) {
                 return "You tie!";
-                // .toLowerCase or .toUpperCase allows for consistent comparison
 
-            } else if (playerSelection.toLowerCase() == "rock") {
+            } else if (lowerPlayerSelection == "rock") {
                 if (computerSelection == "Paper") {
-                    return "You lose!";
+                    return "Comptuer wins!";
                 } else if (computerSelection == "Scissors") {
-                    return "You win!";
+                    return "Player wins!";
                 }
 
-            } else if (playerSelection.toLowerCase() == "paper") {
+            } else if (lowerPlayerSelection == "paper") {
                 if (computerSelection == "Rock") {
-                    return "You win!";
+                    return "Comptuer wins!";
                 } else if (computerSelection == "Scissors") {
-                    return "You lose!";
+                    return "Player wins!";
                 }
 
-            } else if (playerSelection == "scissors") {
-                if (computerSelection == "Rock") {
-                    return "You lose!";
+            } else if (lowerPlayerSelection == "scissors") {
+                if (computerSelection == "Rock") {''
+                    return "Comptuer wins!";
                 } else if (computerSelection == "Paper") {
-                    return "You win!";
+                    return "Player wins!";
                 }
-            } else return "falty";
-        }
 
-
-        function game() {
-            for (let i = 0; i < 5; i++) {
-            console.log(playRound(playerSelection, computerSelection));
+            } else {
+                return "falty";
             }
         }
+
+
+
+        // Play 1 round
+        // if "Player wins!" => playerScore++; 
+        // else if "Comptuer wins!" => computerScore++; 
+        // else "You tie!" => run playRound again
+        // times 5
+        // if playerScore > computerScore, return "You won the game!"
+        // else "You lost the game..."
+
+        function game() {
+            let playerScore, computerScore, winner;
+            let computerSelection, playerSelection;
+            playerScore = 0;
+            computerScore = 0;
+            
+            for (let i = 0; i < 5; i++) {
+                
+                playerSelection = prompt("Rock, Paper, or Scissors?", "");
+                computerSelection = computerPlay();
+                console.log(playerSelection);
+                console.log(computerSelection);
+
+                winner = playRound(playerSelection, computerSelection);
+                console.log(winner);
+
+                if (winner === "Player wins!") {
+                    playerScore++;
+                } else if (winner === "Comptuer wins!") {
+                    computerScore++;
+                } else { 
+                    playRound(playerSelection, computerSelection);
+                }
+
+                console.log(playerScore);
+                console.log(computerScore);
+            }
+
+            if (playerScore > computerScore) {
+                return "You won the game!"
+            } else if (playerScore == computerScore) {
+                return "You tied."
+            } else if (playerScore < computerScore) {
+                return "You lost the game...";
+            } else {
+              return "Falty";
+            }
+        }
+
+        console.log(game())
 
     </script>
 </body>
