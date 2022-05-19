@@ -9,41 +9,65 @@
     <title>Game</title>
     <link rel="icon" type="image/x-icon" href="/home/diana/repos/rockpaperscissors/images/favicon.ico">
 </head>
+
+<!-- SOCIAL MEDIA: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
+
 <body>
-
-    <div class="transition is-active"></div>
-
-    <div>
-        <h3>Play me best of 5! Or else...!</h3>
-        <div class="computer-container">
-            <!-- <div><img src="PICTURE OF KEN'S FACE" ></div> -->
-            <div>
-                <div class="kens-pick">
-                    <div>Ken's pick</div>
-                    <div>**NEON LINE HERE**</div>
-                    <div class="computerChoice">**default hand picture**</div>
+    <div class="parent-gamebody">
+        <div class="gamebody"></div>
+        <div class="gamebody gameplay">
+            <div class="header">Play me best of 5! Or else...!</div>
+            <div class="computer-container">
+                <div><img class="ken_body" src="/home/diana/repos/rockpaperscissors/images/ken_body.png"></div>
+                <div class="computer-right">
+                    <div class="kens-pick">
+                        <div class="kens-text">Ken's pick</div>
+                        <div class="computerChoice"><img class="img-hover fight" id = 'computerChoice' src="/home/diana/repos/rockpaperscissors/images/boxing.gif"></div>    
+                    </div>
+                    <div class="comp-score-display">
+                        <div class="wins-text">Wins</div>
+                        <div class="computerScore">0</div>
+                    </div>
+                    <div></div>    
                 </div>
-                <div class="score-display">
-                    <div>Wins</div>
-                    <div>**NEON LINE HERE**</div>
-                    <div class="computerScore">0</div>
+            </div>  
+
+            <div class="player-container">
+                <div><img class="rohans-face" src="/home/diana/repos/rockpaperscissors/images/favicon.ico" ></div>
+                <div class="player-right">
+                    <ul class="players-pick">
+                        <li class="buttons gif">
+                            <button>
+                                Rock<br>
+                                <img class="img-hover" id ="rock" src="/home/diana/repos/rockpaperscissors/images/rock.png">
+                            </button>
+                        </li>
+                        <li class="buttons gif">
+                            <button>
+                                Paper<br>
+                                <img class="img-hover" id ="paper" src="/home/diana/repos/rockpaperscissors/images/paper.png">
+                            </button>
+                        </li>
+                        <li class="buttons gif">
+                            <button>
+                                Scissors<br>
+                                <img class="img-hover" id ="scissors" src="/home/diana/repos/rockpaperscissors/images/scissors.png">
+                            </button>
+                        </li> 
+                    </ul>
+                    <div class="player-score-display">
+                        <div class="wins-text">Wins</div>
+                        <div class="playerScore">0</div>
+                    </div>
                 </div>
-            </div>    
-        </div>
-        <div class="player-container">
-            <!-- <div><img src="PICTURE OF ROHAN FACE" ></div> -->
-            <ul>
-                <li class="buttons gif"><button id="rock">Rock</button></li>
-                <li class="buttons gif"><button id="paper">Paper</button></li>
-                <li class="buttons gif"><button id="scissors">Rock</button></li>
-            </ul>
-            <div class="score-display">
-                <div>Wins</div>
-                <div>**NEON LINE HERE**</div>
-                <div class="playerScore">0</div>
             </div>
-        </div>
-        
 
+            <!-- ONCE GAMEOVER
+            "Try again? button will appear 
+            refresh the page to home page" -->
+        </div>
+        <div class="gamebody"></div>
     </div>
+    <div><a id = "try-again" class = "play-link" href="/home/diana/repos/rockpaperscissors/rockpaperscissors.html" >Try again?</a></div>
+    <footer>Made by ddtea. ⚜ 2022.</footer>
 </body>

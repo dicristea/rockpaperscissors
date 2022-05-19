@@ -1,3 +1,5 @@
+/* Front page and general */
+
 body {
     font-family: fantasy;
     margin: 0;
@@ -11,6 +13,14 @@ body {
     flex: auto;
 }
 
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: whitesmoke;
+    /* color: rgb(29, 28, 28); */
+}
+
 .logo {
     flex: auto;
     display: inline-flex;
@@ -18,9 +28,10 @@ body {
     align-items: center;
 }
 
+
 .body-columns {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     flex: auto;
 }
 
@@ -31,24 +42,35 @@ body {
     padding: 0px 0px 0px 80px;
 }
 
-.play {
-    padding: 8px;
-    background-color: silver;
-    border: 3px solid greenyellow;
+.play-link {
+    padding: 8px 17px 8px 17px;
+    border-radius: 4px;
+    color: whitesmoke;
+    background-color: rgb(29, 28, 28);
+    border: 3px solid rgb(193, 255, 47);
+    transition-duration: 0.4s;
 }
 
-div.left-side div {
+.play-link:hover {
+    color: rgb(29, 28, 28);
+    background-color: rgb(193, 255, 47);
+}  
+
+
+div.left-side div, .header {
     flex: auto;
     font-size: 5vw;
-    padding: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
+.header {
+    padding: 50px 0 50px 0;
+}
+
 nav {
     flex: auto;
-    padding: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +81,86 @@ nav {
     padding: 0px 100px 0px 0px;
 }
 
+.right-child {
+    height: auto;
+    width: 100%
+}
+
+/* game.html */
+
+.parent-gamebody {
+    display: flex;
+    padding: 20px 30px 0 30px;
+}
+
+.gamebody {
+    flex: auto;
+}
+
+.gamebody.gameplay {
+    flex-grow: .9;
+}
+
+.ken_body {
+    max-width: 50%;
+    min-width: 20%;
+    height: auto;
+    flex: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rohans-face {
+    height: auto;
+    flex: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.computer-container, .player-container {
+    padding: 40px 0 40px 0;
+    flex: auto;
+}
+
+.computer-container, .player-container, .player-right, .computer-right {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+.kens-pick, .comp-score-display, .player-score-display, .players-pick{
+    flex: auto;
+    flex-wrap: wrap;
+}
+
+.comp-score-display, .player-score-display {
+    align-items: flex-end;
+    flex-direction: column;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.wins-text, .computerScore, .playerScore {
+    font-size: 2rem;
+    padding: 0 0 40px 0;
+}
+
+.kens-text {
+    font-size: 2rem;
+    padding: 0 0 50px 0;
+}
+
+.img-hover {
+    height: 150px;
+    width: 150px;
+    border-radius: 40%;
+    padding: 13px;
+}
+
 ul {
     display: flex;
 }
@@ -67,18 +169,30 @@ li {
     list-style: none;
     flex-direction: row;
     flex: auto;
+    flex-wrap: wrap;
 }
-a {
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: rgb(29, 28, 28);
+
+button {
+    font-family: fantasy;
+    font-size: 2rem;
+    color: whitesmoke;
+    background-color: rgb(29, 28, 28);
+    border: 0;
+}
+
+.retry {
+    font-size: 2.5rem;
+    flex: auto;
+    justify-content: center;
+}
+
+.again.play {
+    align-self: center;
+    margin: 50px;
 }
 
 footer {
     flex: auto;
-    width: 100vw;
-    height: 50px;
     font-family: sans-serif;
     display: inline-flex;
     justify-content: center;
