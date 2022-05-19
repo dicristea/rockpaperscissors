@@ -128,7 +128,7 @@ function playRound(playerSelection, computerSelection) {
         if (computerSelection == "rock") {
             winner = "Player wins!";
         } else if (computerSelection == "scissors") {
-            winner = "Player wins!";
+            winner = "Computer wins!";
         }
 
     } else if (playerSelection == "scissors") {
