@@ -2,8 +2,8 @@
 const states = [
   {
     'name': "rock",
-    'default': "/home/diana/repos/rockpaperscissors/images/rock.png",
-    'hover': "/home/diana/repos/rockpaperscissors/images/rock.gif"
+    'default': "images/rock.png",
+    'hover': "images/rock.gif"
   },
   {
     'name': "paper",
@@ -56,11 +56,11 @@ function getPlayerChoice(e) {
     let image = document.getElementById("computerChoice");
 
     if (computerSelection == "rock") {
-        image.src='/home/diana/repos/rockpaperscissors/images/rock.png';
+        image.src='images/rock.png';
     } else if (computerSelection == "paper") {
-        image.src='/home/diana/repos/rockpaperscissors/images/paper.png';
+        image.src='images/paper.png';
     } else if (computerSelection == "scissors") {
-        image.src='/home/diana/repos/rockpaperscissors/images/scissors.png';
+        image.src='images/scissors.png';
     };
 };
 
