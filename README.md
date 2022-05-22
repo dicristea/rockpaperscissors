@@ -5,6 +5,7 @@ What I learned:
 - animating images and buttons using css hover pseudo class (pngs, gifs)
     - css transition-duration applied to .class, new changes on .class:hover
 - text that grows/shrinks with page
+- Objects and retrieving info from them
 - DOM manipulation using js on events
 - usage and DOM manipulation of an object array
 - more practice with functions (within functions), if statements, and loops
